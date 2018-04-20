@@ -1,2 +1,2 @@
 # Yojs
-基于Node和Koa2的项目框架
+基于Node、Koa2和Webpack搭建的项目框架
