@@ -22,7 +22,7 @@ $(function() {
   // 初始化
   init();
 
-  dragPanelMove('.yo-carousel', '.yo-box', '.yo-box')
+  // dragPanelMove('.yo-carousel', '.yo-box', '.yo-box')
   //点击圆点切换
   $('.yo-dots .yo-dot').on('click', function() {
     data.currIndex = Number($(this).attr('data-index'))
