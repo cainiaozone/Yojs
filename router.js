@@ -10,7 +10,8 @@ module.exports = (app) => {
   router.get('/template', templateController.template)
 
     .get('/', templateController.template)
-    .get('/scrollnav',pluginsController.scrollNav)
+    .get('/scrollnav', pluginsController.scrollNav)
+    .get('/yocarousel', pluginsController.yoCarousel)
 
 
   app.use(router.routes())

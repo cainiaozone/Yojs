@@ -1,3 +1,8 @@
+/**
+ * Name: yo_carousel plugin
+ * Author: Bruce
+ * Time: 2018-05-26
+ */
 var data = {
   num: 0, // 子项目个数
   itemWidth: 0, // 子项目宽度
