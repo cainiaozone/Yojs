@@ -38,6 +38,55 @@ $(function() {
 
   })
 
+  // 手势左右滑动事件
+  $(".yo-box .yo-item").on("touchstart", function(e) {
+    startX = e.originalEvent.changedTouches[0].pageX,
+      startY = e.originalEvent.changedTouches[0].pageY;
+  });
+  $(".yo-box .yo-item").on("touchend", function(e) {
+    moveEndX = e.originalEvent.changedTouches[0].pageX,
+      moveEndY = e.originalEvent.changedTouches[0].pageY,
+      X = moveEndX - startX,
+      Y = moveEndY - startY;
+    if (X < 0) {
+      console.log('左滑');
+      //左滑
+      if (data.scrollLfNum < data.itemNum) {
+        data.scrollLfNum++;
+        data.scrollRgNum--;
+        data.toLeftDis = -(data.scrollLfNum * data.itemWidth);
+        console.log('左滑：' + data.scrollLfNum);
+        console.log('右滑：' + data.scrollRgNum);
+        console.log('向左滑距离' + data.toLeftDis);
+        scroll(data.toLeftDis)
+        // 当前子项目的下标号
+        data.currNum = data.scrollLfNum + 1;
+        // console.log("当前子项目的下标号:" + data.currNum);
+        // 加载数据
+        // addData(data.currNum);
+
+      }
+    } else if (X > 0) {
+      //右滑
+      if (data.scrollRgNum < data.scrollLfNum) {
+        data.scrollRgNum++;
+        data.scrollLfNum--;
+        data.toRightDis = data.scrollRgNum * data.itemWidth;
+        console.log('左滑：' + data.scrollLfNum);
+        console.log('右滑：' + data.scrollRgNum);
+        console.log('向右滑距离' + data.toRightDis);
+        scroll(data.toRightDis)
+        // 当前子项目的下标号
+        data.currNum = data.scrollLfNum + 1;
+        // console.log("当前子项目的下标号:" + data.currNum);
+        // 加载数据
+        // addData(data.currNum);
+
+      }
+    }
+
+  });
+
 })
 // 切换当前 dot 状态
 function changeDot(num) {
@@ -75,6 +124,9 @@ function scroll(distance) {
     duration: 'fast'
   }, 'swing');
 }
+
+
+
 // 拖拽效果
 var isMove;
 var dragx;
