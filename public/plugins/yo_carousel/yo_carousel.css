@@ -1,0 +1,55 @@
+/**
+ * Name: yo_carousel plugin
+ * Author: Bruce
+ * Time: 2018-05-26
+ */
+
+.yo-carousel {
+  max-width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.yo-box {
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: -webkit-transform 0.4s ease 0s;
+}
+
+.yo-item {
+  float: left;
+  width: 1200px;
+}
+
+.yo-item img {
+  display: block;
+  max-width: 100%;
+  cursor: move;
+}
+
+.yo-dots {
+  width: 100%;
+  text-align: center;
+}
+
+.yo-dot {
+  display: inline-block;
+  margin-right: 20px;
+  width: 16px;
+  height: 16px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.move {
+  cursor: move;
+}
+
+.yo-dots .active, .yo-dot:hover {
+  background-color: #869791;
+}
+
+.yo-dot:last-child {
+  margin-right: 0;
+}
