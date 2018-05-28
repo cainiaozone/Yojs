@@ -6,9 +6,8 @@ module.exports = (app) => {
   /**
    * 模板文件
    */
-  router.get('/template', templateController.template)
-
-    .get('/', templateController.template)
+  router.get('/', templateController.template)
+    .get('/template', templateController.template)
 
   app.use(router.routes())
     .use(router.allowedMethods())
