@@ -15,7 +15,6 @@ module.exports = (app) => {
     .get('/waterfall', pluginsController.waterfall)
     .get('/watermore', pluginsController.watermore)
 
-
   app.use(router.routes())
     .use(router.allowedMethods())
 }
