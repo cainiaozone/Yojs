@@ -47,6 +47,7 @@
 }
 
 .top-nav .nav-lists {
+  position: absolute;
   height: 50px;
   transition: -webkit-transform 0.4s ease 0s;
 }

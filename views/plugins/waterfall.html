@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/plugins/waterfall/waterfall.css"> -->
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #tasks {
+        margin: 20px auto;
+        width: 500px;
+        height: 200px;
+        border: 1px solid #ddd;
+        overflow-y: auto;
+      }
+      .item {
+        width: 100%;
+        height: 50px;
+        background-color: #ddd;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='tasks'>
+      <!--这是显示的每个条目的内容，保证都有一个共同的class属性，不必是item-->
+      <div class="item">条目1</div>
+      <div class="item">条目2</div>
+      <div class="item">条目n</div>
+      <!--在最后，要加上一个导航，每次滚到底部，就会触发这个url去加载数据-->
+      <div id="navigation">
+        <a href="/watermore?page=2"></a>
+      </div>
+    </div>
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/jquery-infinitescroll/3.0.4/infinite-scroll.pkgd.js"></script> -->
+    <script src="/base/js/jquery.infinitescroll.js"></script>
+    <!-- <script src="/base/js/infinite-scroll.pkgd.min.js"></script> -->
+    <!-- <script src="/base/js/masonry.pkgd.min.js"></script> -->
+    <script src="/plugins/waterfall/waterfall.js"></script>
+  </body>
+</html>

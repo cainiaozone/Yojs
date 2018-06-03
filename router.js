@@ -12,6 +12,8 @@ module.exports = (app) => {
     .get('/', templateController.template)
     .get('/scrollnav', pluginsController.scrollNav)
     .get('/yocarousel', pluginsController.yoCarousel)
+    .get('/waterfall', pluginsController.waterfall)
+    .get('/watermore', pluginsController.watermore)
 
 
   app.use(router.routes())

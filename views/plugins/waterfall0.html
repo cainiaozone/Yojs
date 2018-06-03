@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/plugins/waterfall/waterfall.css">
+  </head>
+  <body>
+    <div class="box">
+      <div class="grid are-images-unloaded">
+        <div class="grid__col-sizer"></div>
+        <div class="grid__gutter-sizer"></div>
+        <div class="grid__item grid__item--height2"></div>
+        <div class="grid__item grid__item--height3"></div>
+        <div class="grid__item grid__item--height1"></div>
+        <div class="grid__item grid__item--height2"></div>
+
+      </div>
+
+      <div class="page-load-status">
+        <div class="loader-ellips infinite-scroll-request">
+          <span class="loader-ellips__dot"></span>
+          <span class="loader-ellips__dot"></span>
+          <span class="loader-ellips__dot"></span>
+          <span class="loader-ellips__dot"></span>
+        </div>
+        <p class="infinite-scroll-last">End of content</p>
+        <p class="infinite-scroll-error">No more pages to load</p>
+      </div>
+    </div>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/base/js/infinite-scroll.pkgd.min.js"></script>
+    <script src="/base/js/masonry.pkgd.min.js"></script>
+    <script src="/plugins/waterfall/waterfall.js"></script>
+  </body>
+</html>
